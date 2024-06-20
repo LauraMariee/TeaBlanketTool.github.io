@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>Tea Blanket Tool </h1>
+    <h1 class="title">Tea Blanket Tool </h1>
+    <p>Date/Time: <span id="datetime"></span></p><script>var dt = new Date();
+    document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
     <div class="number-input">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
       <input class="quantity" min="0" name="quantity" value="1" type="number">

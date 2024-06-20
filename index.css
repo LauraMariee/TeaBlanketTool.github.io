@@ -21,7 +21,6 @@ input[type="number"] {
   
   .number-input button {
     outline:none;
-    -webkit-appearance: none;
     background-color: transparent;
     border: none;
     align-items: center;
@@ -36,7 +35,7 @@ input[type="number"] {
   .number-input button:after {
     display: inline-block;
     position: absolute;
-    font-family: "Font Awesome 5 Free"; 
+    font-family:"comic-sans"; 
     font-weight: 900;
     content: '\f077';
     transform: translate(-50%, -50%) rotate(180deg);
