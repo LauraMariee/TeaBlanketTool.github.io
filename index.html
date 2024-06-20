@@ -9,16 +9,23 @@
   </head>
   <body>
     <h1 class="title">Tea Blanket Tool </h1>
-    <p>Date/Time: <span id="datetime"></span></p><script>var dt = new Date();
-    document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
+    <p>Date/Time: <span id="datetime"></span></p>
+
+    <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML=dt.toLocaleString();
+    </script>
+
     <div class="number-input">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
       <input class="quantity" min="0" name="quantity" value="1" type="number">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
     </div>
     <div class="csv-generation">
-      <button onclick=submitNumber></button>
+      <button onclick=submitNumber()>Export CSV</button>
     </div>
+
+
   <script>
     //Clear form once submitted
     function clearForm(){
@@ -36,7 +43,6 @@
     var encodedUri = encodeURI(csv);
 
     clearForm();
-</script>
-	<script src="index.js"></script>
+  </script>
   </body>
 </html>
