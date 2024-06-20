@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <script src="index.js"></script>
+    <title>Tea Blanket Tool</title>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -22,28 +23,7 @@
       <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
     </div>
 
-
-
-  <script>
-    //Clear form once submitted
-    function clearForm(){
-        document.getElementById("form").reset();
-    }
-
-    function submitNumber() {
-    var formData = $("form").serializeArray();
-    let csv = "/storage/emulated/0/Download/teaBlanket.csv;charset=utf-8,"; // accept data as CSV
-
-    formData.forEach(function(item) {
-    csv += item.value + ";"; // concat form value on csv var and add ; to create columns (you can change to , if want)
-    });
-
-    var encodedUri = encodeURI(csv);
-
-    clearForm();
-  </script>
-
-  <button type="button" onclick="submitNumber()">Export CSV</button>
+    <button type="button" onclick="submitNumber()">Export CSV</button>
 
   </body>
 </html>
